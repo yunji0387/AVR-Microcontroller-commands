@@ -1,5 +1,7 @@
 # AVR-Microcontroller-commands
 ## commands below tested with STK600 board with ATmega2560 chip without issues.
+### [AVR Microcontroller Datasheet](./avr_doc.pdf)
+
 
 ### Basic setup to run the microcontroller
 ```c
