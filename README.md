@@ -1,6 +1,9 @@
 # AVR-Microcontroller-commands
-## commands below tested with STK600 board with ATmega2560 chip without issues.
+- For STK600 board and ATmega2560 chips
+
 ### [AVR Microcontroller Datasheet](./avr_doc.pdf)
+### [My Notes](./notes/)
+### [Code examples](./examples/)
 
 ### How to connect to microcontroller(Windows system)
 <details close>
@@ -78,6 +81,7 @@ cp /mnt/c/Users/AA/Desktop/avr_code.c /home/aa
 </details>
 
 ### Basic code examples
+## codes below are run with STK600 board with ATmega2560 chip.
 #### Basic setup code to run the microcontroller
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
