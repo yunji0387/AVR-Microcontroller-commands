@@ -3,6 +3,10 @@
 ### [AVR Microcontroller Datasheet](./avr_doc.pdf)
 
 ### How to connect to microcontroller(Windows system)
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 - Install WSL(Windows Subsystem for Linux) and Ubuntu LTS
 - Connect the STK600 board power source USB to your computer
 - Connect Atmel ICE to the STK600 board's JTAG port and USB side to your computer
@@ -27,7 +31,14 @@
      usbipd wsl detach --busid <busid>
      ``` 
 
+<!-- /MarkdownTOC -->
+</details>
+
 ### How to transfer files from your local computer to WSL
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ```bash
 cp <path to file in your local computer> <path for files to be store on your WSL>
 ```
@@ -36,7 +47,14 @@ cp <path to file in your local computer> <path for files to be store on your WSL
 cp /mnt/c/Users/AA/Desktop/avr_code.c /home/aa
 ```
 
+<!-- /MarkdownTOC -->
+</details>
+
 ### How to run
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 1. Make sure to run your WSL as administrator
 2. Make sure to setup a Makefile that will transfer your code to the microcontroller, sample Makefile file included in this repository
 3. Transfer your code and Makefile to the WSL
@@ -55,6 +73,10 @@ cp /mnt/c/Users/AA/Desktop/avr_code.c /home/aa
        ```bash
        sudo make <name you set on Makefile>-install
        ```
+
+<!-- /MarkdownTOC -->
+</details>
+
 ### Basic code examples
 #### Basic setup code to run the microcontroller
 <details close>
