@@ -191,3 +191,15 @@ ISR(TIMER0_COMPA_vect) { // interrupt for heartbeat
 
 <!-- /MarkdownTOC -->
 </details>
+
+#### Hysteresis
+
+#### Analog I/O
+
+#### Pulse Width Modulation(PWM)
+
+#### Communication
+
+#### Control System & PID
+
+#### Scheduling Algorithm
