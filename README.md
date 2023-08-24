@@ -2,14 +2,31 @@
 ## commands below tested with STK600 board with ATmega2560 chip without issues.
 ### [AVR Microcontroller Datasheet](./avr_doc.pdf)
 
-### Connect Microcontroller to your computer on Windows
+### How to connect to microcontroller(Windows system)
 - Install WSL(Windows Subsystem for Linux) and Ubuntu LTS
 - Connect the STK600 board power source USB to your computer
 - Connect Atmel ICE to the STK600 board's JTAG port and USB side to your computer
-- In WSL check if both devices(Atmel ICE and STK600) connected properly with your computer with bash command below:
-  - ```bash
-    lsusb
-    ```
+- Now that both devices(Atmel ICE and STK600) are only connected to your local computer, WSL has not yet attached to both devices yet
+- To allow WSL to attach to Atmel ICE and STK600
+  1. Run Windows power shell/command prompt as administrator mode
+  2. Run command below to check the bus ID of Atmel ICE and STK600
+     ```bash
+     usbipd wsl list
+     ```
+  3. Once you get both devices' bus ID, run:
+     ```bash
+     usbipd wsl attach -b <busid>
+     ```
+     command above will ask for sudo permission, enter password to allow device connect to WSL.
+  4. To check if both devices(Atmel ICE and STK600) connected to WSL, run command below on WSL:
+     ```bash
+     lsusb
+     ```
+  5. To detach the devices, run:
+     ```c
+     usbipd wsl detach --busid <busid>
+     ``` 
+
 ### How to transfer files from your local computer to WSL
 ```bash
 cp <path to file in your local computer> <path for files to be store on your WSL>
