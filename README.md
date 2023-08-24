@@ -2,6 +2,42 @@
 ## commands below tested with STK600 board with ATmega2560 chip without issues.
 ### [AVR Microcontroller Datasheet](./avr_doc.pdf)
 
+### Connect Microcontroller to your computer on Windows
+- Install WSL(Windows Subsystem for Linux) and Ubuntu LTS
+- Connect the STK600 board power source USB to your computer
+- Connect Atmel ICE to the STK600 board's JTAG port and USB side to your computer
+- In WSL check if both devices(Atmel ICE and STK600) connected properly with your computer with bash command below:
+  - ```bash
+    lsusb
+    ```
+### How to transfer files from your local computer to WSL
+```bash
+cp <path to file in your local computer> <path for files to be store on your WSL>
+```
+- example
+```bash
+cp /mnt/c/Users/AA/Desktop/avr_code.c /home/aa
+```
+
+### How to run
+1. Make sure to run your WSL as administrator
+2. Make sure to setup a Makefile that will transfer your code to the microcontroller, sample Makefile file included in this repository
+3. Transfer your code and Makefile to the WSL
+4. If you are using the sample Makefile, run the below commands:
+   - First run make to build the executable
+     ```bash
+     make
+     ```
+   - Then transfer code to microcontroller
+     ```bash
+     make <name you set on Makefile>-install
+     ```
+     - If you get the error below:
+       [make error](./images/make_error.png)
+       Please use command below
+       ```bash
+       sudo make <name you set on Makefile>-install
+       ```
 
 ### Basic setup to run the microcontroller
 ```c
@@ -41,6 +77,7 @@ int main(void) {
 ```
 
 ### Interrupt programming
+- [AVR Timer Calculator](https://eleccelerator.com/avr-timer-calculator/)
 - A timer interrupt that fires every 1 millisecond 
 ```c
 #include <avr/io.h>
