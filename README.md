@@ -1,4 +1,4 @@
-# AVR-Microcontroller-commands
+# AVR Microcontroller Notes and Examples
 - For STK600 board and ATmega2560 chips
 
 ### [AVR Microcontroller Datasheet](./avr_doc.pdf)
