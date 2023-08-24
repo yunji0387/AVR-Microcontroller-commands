@@ -51,12 +51,12 @@ cp /mnt/c/Users/AA/Desktop/avr_code.c /home/aa
      ```
      - If you get the error below:
        [make error](./images/make_error.png)
-       Please use command below
+       Please use the command below
        ```bash
        sudo make <name you set on Makefile>-install
        ```
-
-### Basic setup to run the microcontroller
+### Basic examples
+#### Basic setup to run the microcontroller
 ```c
 #include <avr/io.h>
 
@@ -70,7 +70,7 @@ int main(void)
 }
 ```
 
-### Turn on LEDs on STK600 board
+#### Turn on LEDs on STK600 board
 - To turn LEDs, first set portB as output then change the 8bit value on variable PORTB
   - each bit on the PORTB variable represent a LED
     - 0 : turn on LED
@@ -93,8 +93,11 @@ int main(void) {
 }
 ```
 
-### Interrupt programming
-- [AVR Timer Calculator](https://eleccelerator.com/avr-timer-calculator/)
+#### Basic Timer
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+	
 - A timer interrupt that fires every 1 millisecond 
 ```c
 #include <avr/io.h>
@@ -143,3 +146,9 @@ ISR(TIMER0_COMPA_vect) { // interrupt for heartbeat
     interrupt_counter++;
 }
 ```
+- To calculate to fire interrupt at an exact time, visit link below:
+  - [AVR Timer Calculator](https://eleccelerator.com/avr-timer-calculator/)
+
+
+<!-- /MarkdownTOC -->
+</details>
